@@ -136,9 +136,10 @@ We avoid Python's unsafe `eval()` and use a restricted evaluator allowing:
 
 ## Author
 
-**Anuchand C**    
+**Anuchand C**  
 Tredence 2025  
-[LinkedIn]([https://www.linkedin.com/](https://www.linkedin.com/in/anuchand-chelladurai/)) 
+[LinkedIn](https://www.linkedin.com/in/anuchand-chelladurai/)
+
 
 
 
