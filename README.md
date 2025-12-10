@@ -54,11 +54,22 @@ trendance/
 
 ## How to Run Locally
 
-### **1 Create a virtual environment**
+### **1. Create a virtual environment**
 ```bash
 python3 -m venv venv
-source venv/bin/activate
+source venv/bin/activate 
+```
 
+### **2. Install dependencies**
+```bash
+pip install -r requirements.txt
+```
+### **3. Start FastAPI server**
+```bash
+uvicorn app.main:app --reload --port 8000
+```
+### **3. Open Swagger API UI**
+- **[Pydantic](http://127.0.0.1:8000/docs)**
 
 
 
