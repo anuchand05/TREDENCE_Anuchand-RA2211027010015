@@ -1,31 +1,19 @@
-#Mini Workflow Engine — Tredence AI Engineering Internship Assignment
+# Mini Workflow Engine (AI Engineering Internship Assignment)
 
-A lightweight, extensible agent workflow engine built using FastAPI, showcasing Python backend design, async execution, state management, conditional branching, looping logic, and live run inspection.
+## What this repo contains
+- A minimal workflow/graph engine in Python with:
+  - Nodes (simple functions) that read and modify shared state
+  - Edges, branching (via conditions), and a looping example (with max_iterations guard)
+  - A simple tool registry
+  - FastAPI endpoints to create graphs, start runs, and query run state
 
-This project demonstrates the core backend engineering skills required for the Tredence AI Engineering Internship — including API design, workflow orchestration, structured state handling, and clean code architecture.
+- Example workflow implemented: **Code Review Mini-Agent** (Option A).
 
-What This Project Does
+## Files
+- `app/main.py` — FastAPI app
+- `app/engine/graph.py` — core engine
+- `app/engine/tools.py` — tool registry + example tools
+- `app/engine/workflows.py` — sample code-review graph generator
+- `app/models.py` — Pydantic models
+- `requirements.txt`
 
-This engine allows you to:
-
-Define nodes (steps) that execute Python functions
-
-Maintain a shared state dictionary flowing through the workflow
-
-Define edges to control transitions between nodes
-
-Perform conditional branching using safe rule evaluation
-
-Support loops with max_iterations
-
-Register and call custom tools
-
-Run workflows asynchronously
-
-Track progress via:
-
-/graph/state/{run_id} (live state)
-
-/graph/wait/{run_id} (block until completion)
-
-Cancel running workflows (/graph/cancel/{run_id})
