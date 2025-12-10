@@ -1,42 +1,31 @@
-# Mini Workflow Engine (AI Engineering Internship Assignment)
+Mini Workflow Engine — Tredence AI Engineering Internship Assignment
 
-## What this repo contains
-- A minimal workflow/graph engine in Python with:
-  - Nodes (simple functions) that read and modify shared state
-  - Edges, branching (via conditions), and a looping example (with max_iterations guard)
-  - A simple tool registry
-  - FastAPI endpoints to create graphs, start runs, and query run state
+A lightweight, extensible agent workflow engine built using FastAPI, showcasing Python backend design, async execution, state management, conditional branching, looping logic, and live run inspection.
 
-- Example workflow implemented: **Code Review Mini-Agent** (Option A).
+This project demonstrates the core backend engineering skills required for the Tredence AI Engineering Internship — including API design, workflow orchestration, structured state handling, and clean code architecture.
 
-## Files
-- `app/main.py` — FastAPI app
-- `app/engine/graph.py` — core engine
-- `app/engine/tools.py` — tool registry + example tools
-- `app/engine/workflows.py` — sample code-review graph generator
-- `app/models.py` — Pydantic models
-- `requirements.txt`
+What This Project Does
 
-## How to run
-1. Create a venv and install:
+This engine allows you to:
 
-Mini Workflow Engine – AI Engineering Internship Assignment
+Define nodes (steps) that execute Python functions
 
-A lightweight, extensible workflow/graph engine inspired by LangGraph.
-Built using Python, FastAPI, and async execution, it allows you to define:
+Maintain a shared state dictionary flowing through the workflow
 
-Nodes → Python functions that read & modify shared state
+Define edges to control transitions between nodes
 
-Edges → connections defining execution flow
+Perform conditional branching using safe rule evaluation
 
-Conditional branching
+Support loops with max_iterations
 
-Looping based on state
+Register and call custom tools
 
-A shared state dictionary flowing between nodes
+Run workflows asynchronously
 
-This project includes a fully functional example workflow:
+Track progress via:
 
-Code Review Mini-Agent
+/graph/state/{run_id} (live state)
 
-A simple rule-based agent that analyzes Python code and iteratively improves its “quality score”.
+/graph/wait/{run_id} (block until completion)
+
+Cancel running workflows (/graph/cancel/{run_id})
