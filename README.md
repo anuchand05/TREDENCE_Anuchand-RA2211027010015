@@ -130,6 +130,18 @@ uvicorn app.main:app --reload --port 8000
 -**No imports**
 -**No arbitrary code execution**
 
+## Safe Condition Evaluator
+
+We avoid Python's unsafe `eval()` and use a restricted evaluator allowing:
+
+- Boolean logic  
+- Arithmetic  
+- Comparisons  
+- State access (`state["quality_score"]`)
+
+**Disallowed:** function calls, attribute access, imports, or any arbitrary code execution.
+
+
 <img width="1681" height="943" alt="Screenshot 2025-12-10 at 10 41 51 PM" src="https://github.com/user-attachments/assets/945aad37-5615-40ab-82a7-2aae08e8a0d9" />
 
 
