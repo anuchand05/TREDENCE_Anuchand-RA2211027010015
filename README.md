@@ -75,23 +75,27 @@ uvicorn app.main:app --reload --port 8000
 
 ### **1. Create a Graph**
 - **POST /graph/create**
-    - Defines nodes + edges
- 
+  - Defines nodes + edges
+
+---
+
 ### **2. Run a Graph**
 - **POST /graph/run**
-    -Example:
-        - {
-  "graph_id": "code_review_sample",
-  "initial_state": {
-    "code": "def a(): pass",
-    "threshold": 70
+
+  **Example Request**
+  ```json
+  {
+    "graph_id": "code_review_sample",
+    "initial_state": {
+      "code": "def a(): pass",
+      "threshold": 70
+    }
   }
-}
-    -Response:
-        - {
+**Example Response**
+```json
+{
   "run_id": "6100cf19-8cbe-4045-92cd-baab4e6b94e4"
 }
-
 
 
 
