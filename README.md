@@ -117,18 +117,6 @@ uvicorn app.main:app --reload --port 8000
   "status": "cancelled"
 }
 ```
-## Safe Condition Evaluator
-
--**This project avoids Python’s unsafe eval().**
--**Instead, we use a custom function allowing:**
-  -**Boolean logic**
-  -**Arithmetic**
-  -**Comparisons**
-  -**State access (e.g., state["quality_score"])**
--**No function calls**
--**No attribute access**
--**No imports**
--**No arbitrary code execution**
 
 ## Safe Condition Evaluator
 
