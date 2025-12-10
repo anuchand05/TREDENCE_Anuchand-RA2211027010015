@@ -69,7 +69,7 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload --port 8000
 ```
 ### **3. Open Swagger API UI**
-- **[Pydantic](http://127.0.0.1:8000/docs)**
+- **[link](http://127.0.0.1:8000/docs)**
 
 
 
