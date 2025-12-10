@@ -75,7 +75,7 @@ uvicorn app.main:app --reload --port 8000
 
 ### **1. Create a Graph**
 - **POST /graph/create**
-  - Defines nodes + edges
+  - **Defines nodes + edges**
 
 ---
 
@@ -96,6 +96,42 @@ uvicorn app.main:app --reload --port 8000
 {
   "run_id": "6100cf19-8cbe-4045-92cd-baab4e6b94e4"
 }
+```
+### **3. Get Live State**
+-**GET /graph/state/{run_id}**
+  -**Shows**:
+    -**current node**
+    -**workflow status**
+    -**entire state**
+    -**execution logs**
+    
+### **4. Wait Until Completion**
+-**POST /graph/wait/{run_id}**
+  -**Blocks until workflow finishes**
+
+### **5. Cancel Workflow**
+-**POST /graph/cancel/{run_id}**
+  -** Response**
+  ```json
+  {
+  "status": "cancelled"
+}
+```
+## Safe Condition Evaluator
+
+-**This project avoids Python’s unsafe eval().**
+-**Instead, we use a custom function allowing:**
+  -**Boolean logic**
+  -**Arithmetic**
+  -**Comparisons**
+  -**State access (e.g., state["quality_score"])**
+-**No function calls**
+-**No attribute access**
+-**No imports**
+-**No arbitrary code execution**
+
+<img width="1681" height="943" alt="Screenshot 2025-12-10 at 10 41 51 PM" src="https://github.com/user-attachments/assets/945aad37-5615-40ab-82a7-2aae08e8a0d9" />
+
 
 
 
