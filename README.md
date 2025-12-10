@@ -35,7 +35,7 @@ This engine allows you to:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 trendance/
 │── app/
@@ -70,6 +70,14 @@ uvicorn app.main:app --reload --port 8000
 ```
 ### **3. Open Swagger API UI**
 - **[link](http://127.0.0.1:8000/docs)**
+
+## Core API Endpoints
+
+### **1. Create a Graph**
+- **POST /graph/create**
+    - Defines nodes + edges
+ 
+### **2. Run a Graph**
 
 
 
