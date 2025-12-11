@@ -36,7 +36,7 @@ This engine allows you to:
 ---
 
 ## Project Structure
-
+```md
 trendance/
 │── app/
 │   ├── main.py               # FastAPI routes and initialization
@@ -51,6 +51,7 @@ trendance/
 │── requirements.txt
 │── README.md
 │── .gitignore
+```
 
 ## How to Run Locally
 
